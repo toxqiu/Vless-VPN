@@ -22,7 +22,7 @@ dns:
 proxies:
   - name: "AWS-Tokyo"
     type: vless
-    server: 43.207.36.16
+    server: 3.115.13.244
     port: 443
     uuid: 7f8174a3-6cf6-440a-8660-bb109b4f442d
     network: tcp
