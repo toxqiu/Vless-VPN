@@ -1,0 +1,48 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: false
+
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+  fallback:
+    - 8.8.8.8
+    - 1.1.1.1
+    - tls://dns.google
+
+proxies:
+  - name: "AWS-Tokyo"
+    type: vless
+    server: 43.207.36.16
+    port: 443
+    uuid: 7f8174a3-6cf6-440a-8660-bb109b4f442d
+    network: tcp
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    servername: www.microsoft.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 4BifCYOHHX-gqaw5hSQaqI34uRCSj3mDPpw3n9Ds2ho
+      short-id: 4b914e338fc3c6
+
+proxy-groups:
+  - name: "🚀 節點選擇"
+    type: select
+    proxies:
+      - AWS-Tokyo
+      - DIRECT
+
+rules:
+  # 國內直連，國外走節點，極簡高效不繞路
+  - GEOIP,CN,DIRECT
+  - MATCH,🚀 節點選擇
