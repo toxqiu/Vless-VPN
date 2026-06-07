@@ -29,7 +29,7 @@ proxies:
     tls: true
     udp: false
     flow: "xtls-rprx-vision"
-    servername: "www.microsoft.com"
+    servername: "swdist.apple.com"
     client-fingerprint: "chrome"
     reality-opts:
       public-key: "CNOt2SoEB-f6mKo-FIWVmxyvdvoQd9B6ZcVzcSr3FHY"
