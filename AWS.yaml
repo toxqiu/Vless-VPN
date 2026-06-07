@@ -36,13 +36,12 @@ proxies:
       short-id: d31cf4bbad25
 
 proxy-groups:
-  - name: "🚀 節點選擇"
+  - name: "🚀 节点选择"
     type: select
     proxies:
-      - AWS-Seoul-Vless
-      - DIRECT
+      - AWS-Seoul-Reality
 
 rules:
-  # 國內直連，國外走節點，極簡高效不繞路
+  # 国内直连，国外走节点，极简高效不绕路
   - GEOIP,CN,DIRECT
-  - MATCH,🚀 節點選擇
+  - MATCH,🚀 节点选择
