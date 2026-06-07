@@ -17,31 +17,30 @@ dns:
   fallback:
     - 8.8.8.8
     - 1.1.1.1
-    - tls://dns.google
+    - "tls://dns.google"
 
 proxies:
   - name: "AWS-Seoul-Reality"
     type: vless
-    server: 3.34.190.220
+    server: "3.34.190.220"
     port: 443
-    uuid: d082aca8-6075-4538-9988-12a3bf1eacd0
+    uuid: "d082aca8-6075-4538-9988-12a3bf1eacd0"
     network: tcp
     tls: true
     udp: true
-    flow: xtls-rprx-vision
-    servername: www.microsoft.com
-    client-fingerprint: chrome
+    flow: "xtls-rprx-vision"
+    servername: "www.microsoft.com"
+    client-fingerprint: "chrome"
     reality-opts:
-      public-key: CNOt2SoEB-f6mKo-FIWVmxyvdvoQd9B6ZcVzcSr3FHY
-      short-id: d31cf4bbad25
+      public-key: "CNOt2SoEB-f6mKo-FIWVmxyvdvoQd9B6ZcVzcSr3FHY"
+      short-id: "d31cf4bbad25"
 
 proxy-groups:
   - name: "🚀 节点选择"
     type: select
     proxies:
-      - AWS-Seoul-Reality
+      - "AWS-Seoul-Reality"
 
 rules:
-  # 国内直连，国外走节点，极简高效不绕路
-  - GEOIP,CN,DIRECT
-  - MATCH,🚀 节点选择
+  - "GEOIP,CN,DIRECT"
+  - "MATCH,🚀 节点选择"
