@@ -27,7 +27,7 @@ proxies:
     uuid: "d082aca8-6075-4538-9988-12a3bf1eacd0"
     network: tcp
     tls: true
-    udp: false
+    udp: true
     flow: "xtls-rprx-vision"
     servername: "www.microsoft.com"
     client-fingerprint: "chrome"
